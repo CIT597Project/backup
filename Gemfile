@@ -24,6 +24,7 @@ gem 'rails-simple-search'
 gem "paperclip", "~> 4.2"
 gem 'bcrypt'       
 gem 'faker'
+gem 'sqlite3',     '1.3.9'
 
 group :development, :test do
   gem 'minitest-rails'
