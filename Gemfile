@@ -25,14 +25,15 @@ gem "paperclip", "~> 4.2"
 gem 'bcrypt'       
 gem 'faker'
 
+
 group :development, :test do
+  gem 'sqlite3'
   gem 'minitest-rails'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
