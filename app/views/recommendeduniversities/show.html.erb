@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Institution name:</strong>
+  <%= @recommendeduniversity.institution_name %>
+</p>
+
+<p>
+  <strong>Institution address:</strong>
+  <%= @recommendeduniversity.institution_address %>
+</p>
+
+<p>
+  <strong>Institution city:</strong>
+  <%= @recommendeduniversity.institution_city %>
+</p>
+
+<p>
+  <strong>Institution state:</strong>
+  <%= @recommendeduniversity.institution_state %>
+</p>
+
+<p>
+  <strong>Institution zip:</strong>
+  <%= @recommendeduniversity.institution_zip %>
+</p>
+
+<p>
+  <strong>Institution web address:</strong>
+  <%= @recommendeduniversity.institution_web_address %>
+</p>
+
+<%= link_to 'Edit', edit_recommendeduniversity_path(@recommendeduniversity) %> |
+<%= link_to 'Back', recommendeduniversities_path %>

@@ -1,0 +1,26 @@
+<% @school=School.find_by(Institution_Name:"Princeton University")%>
+<head>
+<Title align=center> Princeton University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Princeton University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:40px">
+
+         <img src="http://i.huffpost.com/gen/1401227/thumbs/o-PRINCETON-UNIVERSITY-facebook.jpg" height="400" width"800">
+</div>
+<br>
+<p >
+<br>
+Princeton University is a private Ivy League research university in Princeton, New Jersey.Founded in 1746 in Elizabeth as the College of New Jersey, Princeton was the fourth chartered institution of higher education in the American colonies and thus one of the nine Colonial Colleges established before the American Revolution. The institution moved to Newark in 1747, then to the current site nine years later, where it was renamed Princeton University in 1896. The present-day College of New Jersey in nearby Ewing Township, New Jersey, is an unrelated institution. Princeton had close ties to the Presbyterian Church, but has never been affiliated with any denomination and today imposes no religious requirements on its students.
+<p>
+Princeton provides undergraduate and graduate instruction in the humanities, social sciences, natural sciences, and engineering. It does not have schools of medicine, law, divinity, education, or business, but it offers professional degrees through the Woodrow Wilson School of Public and International Affairs, the School of Engineering and Applied Science, the School of Architecture and the Bendheim Center for Finance. The university has ties with the Institute for Advanced Study, Princeton Theological Seminary, and the Westminster Choir College of Rider University. Princeton has been associated with 37 Nobel laureates, 17 National Medal of Science winners, two Abel Prize winners, eight Fields Medalists (more so than any other university), nine Turing Award laureates, three National Humanities Medal recipients and 204 Rhodes Scholars.
+By endowment per student, Princeton is the wealthiest school in the United States.</p>
+<p>
+
+
+<%=render '/majorrankings/reviews'%>
+<a href="new">Back</a>
+</body>

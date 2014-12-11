@@ -1,0 +1,23 @@
+<% @school=School.find_by(Institution_Name:"Georgia Institute of Technology - Main Campus")%>
+<head>
+<Title align=center> Georgia Institute of Technology </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Georgia Institute of Technology </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:185px">
+
+         <img src="http://gaspull.geeksaresexytech.netdna-cdn.com/wp-content/uploads/2009/09/cs3.jpg" height="400" width"800">
+</div>		
+<br>
+<p >The School of Computer Science is an academic unit located within the College of Computing at the Georgia Institute of Technology (Georgia Tech). It conducts both research and teaching activities related to computer science at the undergraduate and graduate levels. These activities focus on the roots of the computing discipline, including mathematical foundations and system building principles and practices.
+</p>
+
+<a href="new">Back</a>
+
+<%=render 'reviews'%>
+
+
+</body>

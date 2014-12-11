@@ -1,0 +1,23 @@
+<% @school=School.find_by(Institution_Name:"Princeton University")%>
+<head>
+<Title align=center> Princeton University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Princeton University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:175px">
+
+         <img src="http://www.cs.princeton.edu/~cdecoro/edgedetection/csbldg.jpg" height="400" width"800">
+</div>		
+<br>
+<p>
+<br>
+Princeton has been at the forefront of computing since Alan Turing, Alonzo Church and John von Neumann were among its residents. Our department is home to 30 tenure-track and 13 teaching faculty, with strong groups in theory, networks/systems, graphics/vision, programming languages, security/policy, machine learning, and computational biology.
+</p>
+
+<%=render 'reviews'%>
+
+<a href="new">Back</a>
+</body>

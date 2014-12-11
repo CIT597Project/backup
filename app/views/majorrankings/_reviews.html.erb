@@ -1,0 +1,175 @@
+<script>
+  $(function () {
+    $('#myTab a:first').tab('show')
+
+  })
+	</script>
+
+
+
+
+ <h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4>
+
+<div class="row description">
+<table class="table table-striped">
+<tr>
+ <th>State:</th>
+ <td><%=@school.Institution_State%></td>
+</tr>
+<tr>
+ <th>City:</th>
+ <td><%=@school.Institution_City%></td>
+</tr>
+<tr>
+ <th>Address:</th>
+ <td><%=@school.Institution_Address%></td>
+</tr>
+<tr>
+ <th>Zip:</th>
+ <td><%=@school.Institution_Zip%></td>
+</tr>
+<tr>
+ <th>Phone:</th>
+ <td><%=@school.Institution_Phone%></td>
+</tr>
+<tr>
+ <th>Website:</th>
+ <td><%=link_to @school.Institution_Web_Address, "http://#{@school.Institution_Web_Address}"%></td>
+</tr>
+</table>
+</div>
+
+	<br>
+
+<div class="row">
+<div class="col-md-5 review_section">
+
+<h2>people say...</h2>
+
+<% @school.reviews.each do |review| %>
+	<li class="review">
+		<% user=User.find_by(id:review.user_id) %>
+	  <%= link_to gravatar_for(user, size: 50), '#' %>
+
+	  <span class="user"><%= link_to user.username, '#' %></span>
+		<br>
+	  <span class="content">
+	    <%= review.body %>
+	  </span>
+    <% if current_user != nil && current_user.id == user.id %>
+      <%= link_to "Delete", review_path(:id=>review.id, :school_id=>@school.id), method: :delete,class:"btn btn-danger delete", data: { confirm: "You sure?" } %>
+    <% end %>
+		<br>
+	  <span class="timestamp">
+	    Posted <%= time_ago_in_words(review.created_at) %> ago.
+		</span>	  
+	</li>
+	<hr>
+<% end %>
+
+<%if current_user%>
+<div class="add_reviews">
+<%= form_for([@school, @school.reviews.build]) do |f| %>
+  <p>
+    <%= f.text_area :body, placeholder: "I want to say..." %>
+  </p>
+  <p>
+    <%= f.submit class:"btn btn-warning" %>
+  </p>
+	<br>
+<% end %>
+</div>
+
+<%else%>
+<br>
+<div class="form-control">Before write an review, please first <%=link_to "sign in", new_user_session_path%>.</div>
+<br>
+<%end%>
+
+</div>
+
+<div class="col-md-6 review_section">
+	<h2>who love it</h2>
+	<% if @users != nil %>
+	<ul class="nav nav-tabs" role="tablist" id="myTab">
+	  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All Users (<%=@users.count.to_s%>)</a></li>
+	  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">My Following</a></li>
+	</ul>
+	
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="home">
+			
+    <ul>
+			<br>
+      <% @users.each do |user| %>
+		
+				<li>
+        	<%= link_to gravatar_for(user,size: 50), list_path(:id=>user.id), method: "get" %>
+					<span><%=user.email%></span>
+				
+				</li>
+				<br>
+				<br>
+    <% end %>
+			<br>
+			<br>
+		</ul>
+ 
+	
+	
+	<% else  @users != nil %>
+	<ul class="nav nav-tabs" role="tablist" id="myTab">
+	  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All Users (0)</a></li>
+	  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">My Following</a></li>
+	</ul>
+	
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="home">
+			
+    <ul>
+			<br>
+ 
+			<br>
+			<br>
+		</ul>
+  <% end %>
+	
+	
+	
+	
+</div>
+
+ <div role="tabpanel" class="tab-pane" id="profile">
+   <ul>
+		<br>
+		<%if @friends != nil %>
+     <% @friends.each do |user| %>
+	
+			<li>
+       	<%= link_to gravatar_for(user,size: 50), list_path(:id=>user.id), method: "get" %>
+				<span><%=user.email%></span>
+			
+			</li>
+			<br>
+			<br>
+   <% end %>
+	 <%end%>
+		<br>
+		<br>
+	</ul>
+ </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+
+
+
+<div class="center">
+	<% if current_user %>
+	<%= link_to "Add to my list", addSchool_path(:user_id=>current_user.id, :school_id=>@school.id, :name=> @school.Institution_Name), method:"post", class: "btn btn-lg btn-primary" %>
+	<% else %>
+	<%= link_to "Add", new_user_session_path, class: "btn btn-lg btn-primary" %>
+	<% end %>
+</div>

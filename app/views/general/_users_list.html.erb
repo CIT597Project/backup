@@ -1,0 +1,24 @@
+
+
+
+
+<table class='users'>
+<% @users.each do |user| %>
+<tr class="user_info">
+			<td class='user_avatars'>
+				<%= link_to image_tag(user.picture.url), list_path(:id=>user.id) if user.picture? %>
+        <%= link_to gravatar_for(user),  list_path(:id=>user.id) if not user.picture? %>
+			</td>
+			<td>
+        <%= user.username if user.username %></h2>
+				<%= user.email if not user.username %>
+			</td>
+			<td><%=link_to "School List ", list_path(:id=>user.id) %><span class="badge"><%=user.my_schools.count.to_s%></span></td>
+			<td id="follow_icon">
+				<% @user=user%>
+				<%= render 'users/follow_form'%>
+			</td>
+</tr>
+<% end %>
+<%= will_paginate @users%>	
+</table>

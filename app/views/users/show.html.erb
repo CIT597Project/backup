@@ -1,0 +1,75 @@
+<% provide(:title, @user.username) %>
+
+  <div class="col-md-4">
+    <section>
+		
+			  <div class="col-md-8">
+			    <section class="user_info">
+			      <h4>
+						<%= image_tag @user.avatar.url(:thumb) if @user.avatar? %>	
+				
+			 		 <%= gravatar_for @user if not @user.avatar? %>
+			       <p> <%= @user.username %></p>
+							<p><%= @user.email %></p>
+			      </h4>
+			    </section>
+		
+					<section class="stats">
+						<%= render 'devise/shared/stats'%>
+					</section>
+				</div>
+	
+
+			<div class="detail_info">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			
+	
+				<table class="table">
+					<tr>
+						<th>Current University:</th>
+						<td><%=@user.grad_university%></td>
+					</tr>
+					<tr>
+						<th>Current College:</th>
+						<td><%=@user.college%></td>
+					</tr>
+					<tr>
+						<th>Current Major:</th>
+						<td><%=@user.major%></td>
+					</tr>
+					<tr>
+						<th>High School:</th>
+						<td><%=@user.high_school%></td>
+					</tr>
+					<tr>
+						<th>Applying Degree:</th>
+						<td><%=@user.app_degree%></td>
+					</tr>
+				</table>
+			</div>
+    </section>
+    <br>
+		<br>
+		<%=render 'users/follow_form'%>
+	</div>
+	
+	
+	
+  <div class="col-md-8 list">
+      <h3>School List ( <%= @user.my_schools.count %> )</h3>
+      <ol class="mylist ol_format">
+        <%= render @user.my_schools %>
+      </ol>
+  </div>
+
+
+

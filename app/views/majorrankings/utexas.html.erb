@@ -1,0 +1,35 @@
+<% @school=School.find_by(Institution_Name:"University of Texas at Austin")%>
+<head>
+<Title align=center> University of Texas-Austin </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> University of Texas-Austin</h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:140px">
+
+         <img src="http://hmg-associates.com/images/ut-bill-melinda-gates-large.jpg" height="400" width"800">
+</div>
+
+<p >
+<br>
+	<li>9th best department in the nation.</li>
+	<li>Largest top-ten department in the country.</li>
+	<li>Only top-ten ranked computer science department within 1000 miles of Austin.</li>
+	<li>Produces 20 percent of Texas computer science graduates and 18 percent of all computer science graduates from national top-tierdepartments.</li>
+	<li>Credited with a strategic impact in Texas of about $8.7 billion per year.</li>
+	<li>66 percent of graduates stay in Texas.</li>
+	<li>17 percent Hispanic undergraduate enrollment.</li>
+	<li>47 major inventions.</li>
+	<li>22 patent applications filed.</li>
+	<li>16 commercialized technologies.</li>
+<br>
+<p>
+The Department of Computer Science offers a unique opportunity for students to achieve excellence in the fundamentals of computer science and practical technical skills through rigorous classes, hands-on research and technology development. Its pioneering researchers create scientific knowledge and leading edge technologies that change the world.</p>
+</p>
+
+<%=render 'reviews'%>
+
+<a href="new">Back</a>
+</body>

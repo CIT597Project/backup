@@ -1,0 +1,25 @@
+<h1>Follow A Friend</h1>
+
+<table>
+	<tr>
+ <%= form_tag general_search_friend_path, {method: :get} do %> 
+ <th id="paginate">
+ <%= will_paginate @users, class:"pagination"%>	
+
+ </th>
+<th id="search_form">
+     
+     <%= text_field_tag :search, params[:search], placeholder: "search a friend", class:"form-control" %> 
+
+ </th>
+ <th id="search_icon">
+		
+		  <%= image_submit_tag "search.png", :name => nil%>
+	 </th>
+ <% end %>
+</tr>
+</table>
+
+
+<hr>
+<%= render 'general/users_list'%>

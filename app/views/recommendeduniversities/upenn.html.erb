@@ -1,0 +1,28 @@
+<% @school=School.find_by(Institution_Name:"University of Pennsylvania")%>
+<head>
+<Title align=center> University of Pennsylvania </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> University of Pennsylvania </h1><h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+
+<div style=" margin-left:70px">
+
+         <img src="http://upload.wikimedia.org/wikipedia/commons/6/69/Penn_campus_2.jpg" height="400" width"800">
+</div>		
+</p>
+<p > 
+<br>
+The University of Pennsylvania (commonly referred to as Penn or UPenn) is an American private Ivy League research university located in Philadelphia. Incorporated as The Trustees of the University of Pennsylvania, Penn is one of 14 founding members of the Association of American Universities and one of the nine original Colonial Colleges.
+<p>
+Benjamin Franklin, (1705/06-1790), Penn's founder, advocated an educational program that focused as much on practical education for commerce and public service as on the classics and theology. Penn was one of the first academic institutions to follow a multidisciplinary model pioneered by several European universities, concentrating multiple "faculties" (e.g., theology, classics, medicine) into one institution.[6] It was also home to many other educational innovations. The first school of medicine in North America (Perelman School of Medicine, 1765), the first collegiate business school (Wharton, 1881) and the first "student union" building and organization, (Houston Hall, 1896) were all born at Penn.
+<p>
+Penn offers a broad range of academic departments, an extensive research enterprise and a number of community outreach and public service programs. It is particularly well known for its medical school, dental school, design school, school of business, law school, communications school, nursing school, veterinary school, its social sciences and humanities programs, as well as its biomedical teaching and research capabilities. Its undergraduate programs are also among the most selective in the country (approximately 10% acceptance rate). One of Penn's most well known academic qualities is its emphasis on interdisciplinary education, which it promotes through numerous joint degree programs, research centers and professorships, a unified campus, and the ability for students to take classes from any of Penn's schools (the "One University Policy").</p>
+<p>
+
+
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>

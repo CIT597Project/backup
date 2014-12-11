@@ -1,0 +1,33 @@
+<% @school=School.find_by(Institution_Name:"Stanford University")%>
+<head>
+<Title align=center> Stanford University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Stanford University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:180px">
+
+         <img src="http://www.eitc.org/Young_Investigator_Forum/photos/Stanford-P1020589.JPG" height="400" width"800">
+</div>
+</p>
+<p >
+<br>
+Leland Stanford Junior University, or more commonly Stanford University, is a private research university in Stanford, California, and one of the world's most prestigious institutions, with the highest undergraduate selectivity and fundraising performance in the United States.
+<p>
+Stanford was founded in 1885 by Leland Stanford, former governor of and U.S. senator from California and leading railroad tycoon, and his wife, Jane Lathrop Stanford, in memory of their only child, Leland Stanford, Jr., who died of typhoid fever at age 15 the previous year. Stanford was opened on October 1, 1891 as a coeducational and non-denominational institution. Tuition was free until 1920. The university struggled financially after Leland Stanford's 1893 death and after much of the campus was damaged by the 1906 San Francisco earthquake. Following World War II, Provost Frederick Terman supported faculty and graduates' entrepreneurialism to build self-sufficient local industry in what would later be known as Silicon Valley. By 1970, Stanford was home to a linear accelerator, and was one of the original four ARPANET nodes (precursor to the Internet).
+<p>
+Stanford is located in northern Silicon Valley near Palo Alto, California. The University's academic departments are organized into seven schools, and its 8,180-acre (3,310 ha) campus is one of the largest of its kind in the United States[8] with several other holdings, such as laboratories and nature reserves, located outside the main campus. The University is the top fundraising institution in the country, becoming the first school to raise more than a billion dollars in a year.
+<p>
+Stanford's undergraduate program is the most selective in the country with an acceptance rate of 5.07% for the 2018 Class. Students compete in 36 varsity sports, and the University is one of two private institutions in the Division I FBS Pacific-12 Conference. It has gained 105 NCAA championships, the 
+second-most for a university, and has won the NACDA Directors' Cup every year since 1994-1995.
+<p>
+Stanford faculty and alumni have founded many companies including Google, Hewlett-Packard, Nike, Sun Microsystems, and Yahoo!, and companies founded by Stanford alumni generate more than $2.7 trillion in annual revenue, equivalent to the 10th-largest economy in the world. Fifty-nine Nobel laureates have been affiliated with the University, and it is the Alma Mater of 30 living billionaires, and 17 astronauts. Stanford has produced a total of 18 Turing Award laureates, the highest in the world for any one institution.[citation needed] It is also one of the leading producers of members of the United States Congress.</p>
+<p>
+
+
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>

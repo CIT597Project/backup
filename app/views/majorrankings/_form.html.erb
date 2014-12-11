@@ -1,0 +1,35 @@
+<%= form_for(@majorranking) do |f| %>
+  <% if @majorranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@majorranking.errors.count, "error") %> prohibited this majorranking from being saved:</h2>
+
+      <ul>
+      <% @majorranking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<h1>Universities</h1>
+<table>
+	<tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

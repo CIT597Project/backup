@@ -1,0 +1,34 @@
+<% @school=School.find_by(Institution_Name:"University of California - Berkeley")%>
+<head>
+<Title align=center> University of California, Berkeley </title>
+</head>
+
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> University of California, Berkeley </h1>
+
+ <h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4>
+
+<hr>
+<div style=" margin-left:155px">
+
+         <img src="http://www.cs.berkeley.edu/~carazvan/soda_hall.jpg" height="400" width"800">
+</div>
+</p>
+<p > 
+<br>
+
+The impact of Berkeley research on the practical end of computer science has been significant. During the 1970's theoretical research led by Professors R. A. Karp and S. A. Cook established fundamental concepts and limits of computational complexity. Former student Steve Wozniak co-founded Apple Computer with Steve Jobs. Berkeley faculty and students, led by Profs. R. Fabry and D. Ferrari, obtained source code and rights to the early Bell Labs UNIX operating system, added networking features and virtual memory support for the DEC VAX. Berkeley UNIX on VAX became the standard for DARPA researchers of this period. The INGRES database system, developed by Profs. M. Stonebraker and E. Wong, established the feasibility of implementing the relational data model on small computers. Berkeley INGRES was the first complete implementation of a relational database management system.
+<p>
+Innovation accelerated in the 1980s. Berkeley UNIX, including the Internet’s TCP/IP protocol suite, was publicly released as BSD 4.2. The work on computer-aided design broke new ground with demonstrations of design synthesis from logic specifications, producing chip designs that are “correct by construction.” Yet there also were many new activities and achievements.
+<p>
+The development of Reduced Instruction Set computers by David Patterson and Carlo Sequin, the Redundant Array of Inexpensive Disks project led by Randy Katz and David Patterson, and the INGRES relational database system led by Mike Stonebraker, Larry Rowe and Eugene Wong, can be directly connected to multi-billion dollar industries. In the area of system software, the impact of Berkeley Unix on minicomputers and subsequently on workstations and, through LINUX, on personal computers, is self-evident. Nor can we forget the role of Berkeley alumni in sparking the workstation and personal computer industry—pioneers such as Butler Lampson (Xerox PARC), Bill Joy (Sun), and Steve Wozniak (Apple). Numerical computations would not have been reliable had it not been for adoption of the IEEE 754 floating point standard, largely due to William Kahan, who received a Turing Award in 1989 for this work. In the area of programming languages and software engineering, Berkeley research has been noted for its flair for combining theory and practice.
+<p>
+UC Berkeley led the development of computational complexity theory with the foundational work of Richard Karp who showed the hardness of well-known algorithmic problems, such as finding the minimum cost tour for a traveling salesperson, could be related to NP-completeness—a concept proposed earlier by former Berkeley mathematics professor Stephen A. Cook. The resulting P vs. NP question has since been accepted as one of the ten most important open problems in mathematics, along with such classics as the Riemann Hypothesis. Berkeley computer scientists continue to lead the field of computational complexity, with work such as that on probabilistically checkable proofs and the hardness of approximation problems by Sanjeev Arora and Madhu Sudan in the early 1990s, and on quantum complexity theory by Ethan Bernstein and Umesh Vazirani a few years later. Two Turing Awards (Richard Karp, Manuel Blum) and four ACM Ph.D. Dissertation Awards (Eric Bach, Noam Nisan, Madhu Sudan, and Sanjeev Arora) are just a few of the honors garnered by the research in theoretical computer science at Berkeley. 
+<p>
+Berkeley’s AI effort grew largely in the 80s and 90s, at a time when problems with this paradigm were becoming evident, and researchers at Berkeley played a major role in developing the new, more probabilistic and learning-oriented AI. This new synthesis brought traditional AI together with control theory, pattern recognition, neural networks, and statistical learning theory. Stuart Russell and Peter Norvig’s bestselling textbook has become the canonical exemplar of this synthesis, and research at Berkeley in fields such as vision, robotics and learning is bringing us ever closer to the dream of truly intelligent machines.</p>
+<p>
+
+<%=render 'reviews'%>
+<a href="new">Back</a>
+</body>

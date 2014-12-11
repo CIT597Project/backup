@@ -1,0 +1,28 @@
+<% @school=School.find_by(Institution_Name:"California Institute of Technology")%>
+<head>
+<Title align=center> California Institute of Technology </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> California Institute of Technology </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:150px">
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/9/9c/Robert_A._Millikan_Memorial_Library_at_Caltech.jpg" height="400" width"800">
+</div>
+</p>
+<p> 
+<br>
+The California Institute of Technology (or Caltech) is a private research university located in Pasadena, California, United States. Caltech has six academic divisions with strong emphasis on science and engineering. Its 124-acre (50 ha) primary campus is located approximately 11 mi (18 km) northeast of downtown Los Angeles.
+<p>
+Although founded as a preparatory and vocational school by Amos G. Throop in 1891, the college attracted influential scientists such as George Ellery Hale, Arthur Amos Noyes, and Robert Andrews Millikan in the early 20th century. The vocational and preparatory schools were disbanded and spun off in 1910, and the college assumed its present name in 1921. In 1934, Caltech was elected to the Association of American Universities, and the antecedents of NASA's Jet Propulsion Laboratory, which Caltech continues to manage and operate, were established between 1936 and 1943 under Theodore von Kármán. The university is one among a small group of Institutes of Technology in the United States which tends to be primarily devoted to the instruction of technical arts and applied sciences.
+<p>
+Despite its small size, 33 Caltech alumni and faculty have won a total of 34 Nobel Prizes (Linus Pauling being the only individual in history to win two unshared prizes) and 71 have won the United States National Medal of Science or Technology. There are 112 faculty members who have been elected to the National Academies. In addition, numerous faculty members are associated with the Howard Hughes Medical Institute as well as NASA. Caltech managed $332 million in 2011 in sponsored research and $1.85 billion for its endowment in 2013. It also has a long standing rivalry with the Massachusetts Institute of Technology (MIT).
+<p>
+First year students are required to live on campus, and 95% of undergraduates remain in the on-campus house system. Although Caltech has a strong tradition of practical jokes and pranks, student life is governed by an honor code which allows faculty to assign take-home examinations. The Caltech Beavers compete in 13 intercollegiate sports in the NCAA Division III's Southern California Intercollegiate Athletic Conference.</p>
+<p>
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>

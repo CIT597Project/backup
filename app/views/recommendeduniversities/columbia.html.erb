@@ -1,0 +1,26 @@
+<% @school=School.find_by(Institution_Name:"Columbia University in the City of New York")%>
+<head>
+<Title align=center> Columbia University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Columbia University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:180px">
+
+         <img src="http://upload.wikimedia.org/wikipedia/commons/0/07/Low_Memorial_Library_Columbia_University_NYC_retouched.jpg" height="400" width"800">
+</div>
+</p>
+<p > 
+<br>
+Columbia University in the City of New York, or simply Columbia University, is an American private Ivy League research university located in the Morningside Heights neighborhood of Upper Manhattan in New York City. It is the oldest institution of higher learning in the State of New York, the fifth oldest in the United States, and one of the country's nine Colonial Colleges founded before the American Revolution. Today the university operates Columbia Global Centers overseas in Amman, Beijing, Istanbul, Paris, Mumbai, Rio de Janeiro, Santiago and Nairobi.
+<p>
+The university was founded in 1754 as King's College by royal charter of George II of Great Britain. After the American Revolutionary War, King's College briefly became a state entity, and was renamed Columbia College in 1784. The University now operates under a 1787 charter that places the institution under a private board of trustees, and in 1896 it was further renamed Columbia University. That same year, the university's campus was moved from Madison Avenue to its current location in Morningside Heights, where it occupies more than six city blocks, or 32 acres (13 ha). The university encompasses twenty schools and is affiliated with numerous institutions, including Teachers College (which is Columbia University's Graduate School of Education), Barnard College, and the Union Theological Seminary, with joint undergraduate programs available through the Jewish Theological Seminary of America as well as the Juilliard School.
+<p>
+Columbia annually administers the Pulitzer Prize. 101 Nobel Prize laureates have been affiliated with the university as students, faculty, or staff, the second most of any institution in the world. Columbia is one of the fourteen founding members of the Association of American Universities, and was the first school in the United States to grant the M.D. degree. Notable alumni and former students of the university and its predecessor, King's College, include five Founding Fathers of the United States; nine Justices of the United States Supreme Court; 43 Nobel Prize laureates; 20 living billionaires; 28 Academy Award winners; and 29 heads of state, including three United States Presidents.</p>
+<p>
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>

@@ -1,0 +1,23 @@
+<% @school=School.find_by(Institution_Name:"Stanford University")%>
+<head>
+<Title align=center> Stanford University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Stanford University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:80px">
+
+         <img src="http://static.panoramio.com/photos/large/249647.jpg" height="400" width"800">
+<div>		
+</p>
+<p > 
+<br>
+Founded in 1965, the Stanford Computer Science (CS) Department continues to lead the world in computer science research and education. Throughout the past four decades, the Stanford CS Department has influenced society at levels that remain without parallel among academic institutions. Its spin-offs are among the most successful corporate ventures in the world, and many of the leaders in the academic and corporate research world are graduates of the Stanford CS Department.</p>
+<p>
+
+<%=render 'reviews'%><a href="new">Back</a>
+
+<a href="new">Back</a>
+</body>

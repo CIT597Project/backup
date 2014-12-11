@@ -1,0 +1,41 @@
+<% if my_school.school_id.to_i != 0 %>
+
+
+
+
+<li class="my_school">
+  <div class="inline">
+  <span class="name"><%= link_to my_school.name, school_path(:id=>my_school.school_id.to_i) %></span>
+	<span class="delete btn">
+	<% if my_school.user_id == current_user.id %>
+		<%= link_to "Edit", '#', class:"btn btn-info"%>
+		<%= link_to "Delete", my_school, method: :delete, class:"btn btn-danger",
+	                                       data: { confirm: "You sure?" },
+	                                       title: my_school.name %>
+  <% end %>	
+</span>
+
+</div>
+
+<span class="comment"><%= my_school.comment %></span>
+
+
+   <div>
+		 
+		 <%current_user.following.each do |user|%>
+      <% if user.my_schools.find_by(name:my_school.name) != nil %>
+				
+						<div data-toggle="tooltip" data-placement="top" title='<%=user.username %>'>
+            	<%= link_to gravatar_for(user,size: 30), list_path(:id=>user.id), method: "get" %>
+						</div>
+   
+      <% end %>
+			<%end%>
+	
+	</div>
+
+<br>
+<br>	
+</li>
+
+<% end %>

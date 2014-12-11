@@ -1,0 +1,563 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$gray-medium-light: #eaeaea;
+$brand-primary: #428bca;
+$brand-success: #5cb85c;
+$brand-info:    #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger:  #d9534f;
+$gray-darker:  lighten(#000, 13.5%); // #222
+$gray-dark:    lighten(#000, 20%);   // #333
+$gray:         lighten(#000, 33.5%); // #555
+$gray-light:   lighten(#000, 46.7%); // #777
+$gray-lighter: lighten(#000, 93.5%); // #eee
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+h3 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+	
+  text-align: center;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+	margin-right: 15px;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width:100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+
+
+
+/* my_school list */
+
+.my_school {
+	.name {
+		margin-left:10px;
+		font-size:1.3em;
+	}
+	.inline {
+		span {
+			display:inline;
+		}
+	}
+	.delete {
+		clear: both;
+		float:right;
+	}
+}
+
+.my_schools {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .name {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .comment {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+}
+
+
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+
+/* aside */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+		
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* devise */
+.field {
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+}
+
+.actions {
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	
+}
+.cancel {
+	margin-left: auto;
+	margin-right: auto;
+	width: 15%;
+	
+}
+
+/* sidebar */
+
+
+.sidebar {
+	position:fixed;
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 5px;
+	border-top:1px solid $gray-lighter;
+	border-bottom:1px solid $gray-lighter;
+	border-right:1px solid $gray-lighter;
+	border-left:5px solid $brand-danger;
+	li {
+		border-bottom:1px solid $gray-lighter;
+	}
+	
+}
+
+/* search bar */
+
+#search_form {
+	width: 200px;
+
+	input, textarea {
+		font-size:1.0em;
+		font-weight:normal;
+	}
+	vertical-align:middle;
+	
+}
+
+#search_icon {
+	width:30px;
+	height:30px;
+}
+
+#paginate {
+	width:80%;
+	font-weight:normal;
+}
+
+th {
+	vertical-align:middle;
+}
+
+
+/* stats */
+.stats {
+	display: inline;
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+/* follow */
+#follow_icon {
+	width: 10px;
+}
+
+.users {
+	margin-left: 10%;
+	width:80%;
+}
+
+.col-md-8 {
+	border-left: 1px solid $gray-medium-light;
+}
+
+tr.user_info {
+	border-bottom:1px solid $gray-medium-light;
+}
+
+
+#check_box {
+    width: 15px;
+    height: 15px;
+    padding: 0px;
+    margin:0;
+    vertical-align: top;
+    position: relative;
+    top: 5px;
+    *overflow: hidden;
+}
+
+#check_label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+		margin-left: 5px;
+}
+.button {
+	position: relative;
+	margin-left: 25%;
+	width:50%;
+}
+
+/* vedio */
+video#bgvid{
+	position:fixed;
+	right:0;
+	bottom:0;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	z-index:-100;
+}
+
+/* bootstrap */
+.jumbotron {
+	background-color:rgba(192,192,192,0.5);
+	border-radius: 10px;
+}
+
+/* school page */
+.add_reviews{
+	margin-left:20px;
+	width:300px;
+}
+
+
+.review_section {
+	margin-left:30px;
+	border-radius: 5px;
+	border-top:1px solid $brand-warning;
+	border-bottom:1px solid $brand-warning;
+	border-right:1px solid $brand-warning;
+	border-left:5px solid $brand-warning;
+	
+	
+	.review {
+	
+	margin-left:20px;
+  list-style: none;
+  padding: 0px;
+	
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+	span {
+		width:50%;
+		display:inline;
+	}
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  
+  .timestamp {
+    color: $gray-light;
+  }
+  
+	.delete {
+		margin-right:30px;
+		float:right;
+	}
+}
+
+
+}
+
+
+.followed_by {
+	text-align:right;
+	margin-right:30px;
+}
+
+.description {
+
+	border-radius: 5px;
+	border-top:1px solid $gray-lighter;
+	border-bottom:5px solid $gray-lighter;
+	border-right:1px solid $gray-lighter;
+	border-left:5px solid $brand-info;
+	margin-left:16px;
+	margin-right:13px;
+	
+}
+
+.inline {
+	div {
+		display:inline;
+		margin-left:20px;
+	}
+	
+	.list_school_name {
+		font-size: 1.5em;
+		font-style:bold;
+	}
+	.list_add {
+	
+	}
+	.list_website {
+	}
+	.list_follow {
+		
+	}
+}
+
+
+
+.ol_format {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+
+li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:4px 8px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:2px solid #666;
+   
+}
+li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:2px solid #666;
+    color:#fff;
+    background:#666;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+}
+
+
+.nav-stacked {
+	li {
+		padding:10px;
+	}
+}
+
+
+.detail_info {
+	border-radius: 5px;
+	border-top:1px solid $gray-lighter;
+	border-bottom:1px solid $gray-lighter;
+	border-right:1px solid $gray-lighter;
+	border-left:5px solid $brand-info;
+
+}
+
+.list {
+	border-radius: 5px;
+	border-top:1px solid $gray-lighter;
+	border-left:5px solid $brand-warning;
+}

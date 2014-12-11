@@ -1,0 +1,25 @@
+<% @school=School.find_by(Institution_Name:"University of Illinois at Urbana-Champaign")%>
+<head>
+<Title align=center> University of Illinois-Urbana-Champaign </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> University of Illinois-Urbana-Champaign </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:40px">
+
+         <img src="http://ml.cs.illinois.edu/images/sbl.jpg" height="400" width"800">
+</div>
+</p>
+<p > 
+<br>
+Home to 59 faculty members researching all aspects of computer science, from systems and networking to artificial intelligence, and from graphics and human-computer interaction to database systems and information retrieval, CS @ ILLINOIS stands at the forefront of computing innovation in the 21st century.
+<p>
+The Thomas M. Siebel Center for Computer Science serves as a living laboratory to explore and evaluate emerging computing technologies. This major education and research facility is one of the most advanced buildings on any campus.</p>
+<p>
+
+<%=render 'reviews'%>
+
+<a href="new">Back</a>
+</body>

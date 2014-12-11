@@ -1,0 +1,23 @@
+
+<% @school=School.find_by(Institution_Name:"Cornell University")%>
+<head>
+<Title align=center> Cornell University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Cornell University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+<div style=" margin-left:160px">
+
+         <img src="http://cornellsun.com/wp-content/uploads/2014/01/Pg-1-Gates-Hall-by-Diana-Mak-Staff.jpg" height="400" width"800">
+</div>		
+</p>
+<p > 
+<br>
+The Department was organized in 1965 and is one of the oldest departments of its kind in the country. The history of the department, including major events and when faculty joined, appears in the CS Timeline. It has a full-time faculty of nearly 40, approximately 110 resident Ph.D. graduate students, 100 M.Eng students, and approximately 300 undergraduate CS majors, with around 100-130 students graduating each year.</p>
+<p>
+
+
+<%=render 'reviews'%>
+<a href="new">Back</a>
+</body>

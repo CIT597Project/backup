@@ -1,0 +1,56 @@
+<!-- <%= image_tag current_user.picture.url if current_user.picture? %> -->
+
+
+  <div class="col-md-8">
+    <section class="user_info">
+      <h5>
+			<%= image_tag current_user.avatar.url(:thumb) if current_user.avatar? %>	
+				
+ 		 <%= gravatar_for current_user if not current_user.avatar? %>
+        <%= current_user.username %></h2>
+      </h5>
+			<%= link_to "edit my profile", edit_user_registration_path %>
+    </section>
+		
+		<section class="stats">
+			<%= render 'devise/shared/stats'%>
+		</section>
+	</div>
+	
+
+<div class="detail_info">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+	<table class="table">
+		<tr>
+			<th>Current University:</th>
+			<td><%=current_user.grad_university%></td>
+		</tr>
+		<tr>
+			<th>Current College:</th>
+			<td><%=current_user.college%></td>
+		</tr>
+		<tr>
+			<th>Current Major:</th>
+			<td><%=current_user.major%></td>
+		</tr>
+		<tr>
+			<th>High School:</th>
+			<td><%=current_user.high_school%></td>
+		</tr>
+		<tr>
+			<th>Applying Degree:</th>
+			<td><%=current_user.app_degree%></td>
+		</tr>
+	</table>
+</div>

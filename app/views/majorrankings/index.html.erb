@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Majorrankings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @majorrankings.each do |majorranking| %>
+      <tr>
+        <td><%= link_to 'Show', majorranking %></td>
+        <td><%= link_to 'Edit', edit_majorranking_path(majorranking) %></td>
+        <td><%= link_to 'Destroy', majorranking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Majorranking', new_majorranking_path %>

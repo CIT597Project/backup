@@ -1,0 +1,26 @@
+<% @school=School.find_by(Institution_Name:"Massachusetts Institute of Technology")%>
+<head>
+<Title align=center> Massachusetts Institute of Technology </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Massachusetts Institute of Technology </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:180px">
+
+         <img src="http://upload.wikimedia.org/wikipedia/commons/6/6b/Simmons_Hall,_MIT,_Cambridge,_Massachusetts.JPG" height="400" width"800">
+</div>		
+</p>
+<p > 
+<br>
+The Massachusetts Institute of Technology (MIT) is a private research university in Cambridge, Massachusetts. Founded in 1861 in response to the increasing industrialization of the United States, MIT adopted a European polytechnic university model and stressed laboratory instruction in applied science and engineering. Researchers worked on computers, radar, and inertial guidance during World War II and the Cold War. Post-war defense research contributed to the rapid expansion of the faculty and campus under James Killian. The current 168-acre (68.0 ha) campus opened in 1916 and extends over 1 mile (1.6 km) along the northern bank of the Charles River basin.
+<p>
+MIT, with five schools and one college which contain a total of 32 departments, is traditionally known for research and education in the physical sciences and engineering, and more recently in biology, economics, linguistics, and management as well. The "Engineers" sponsor 31 sports, most teams of which compete in the NCAA Division III's New England Women's and Men's Athletic Conference; the Division I rowing programs compete as part of the EARC and EAWRC.
+MIT is often cited as among the world's top universities. As of 2014, 81 Nobel laureates, 52 National Medal of Science recipients, 45 Rhodes Scholars, 38 MacArthur Fellows, and 2 Fields Medalists have been affiliated with MIT. MIT has a strong entrepreneurial culture and the aggregated revenues of companies founded by MIT alumni would rank as the eleventh-largest economy in the world.</p>
+<p>
+
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>

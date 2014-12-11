@@ -1,0 +1,31 @@
+<h1>Major Ranking (computer science)</h1>
+
+
+<ol class="ol_format">	
+ <% @majorrankings.each do |majorranking| %>  
+ <% school=School.find_by(Institution_Name:majorranking.institution_name)%> 
+   <li>
+		 <br>
+		 <div class="inline">
+				 <div class="list_school_name col-md-9"><%= link_to school.Institution_Name, "#{majorranking.name_abb}", class:"school_name"%></div>
+				 <div class="list_add col-md-2">
+	 				<% if current_user %>
+	 			 		<%= link_to "Add", addSchool_path(:user_id=>current_user.id, :school_id=>School.find_by(Institution_ID:school.Institution_ID).id, :name=> school.Institution_Name), method:"post", class:"btn btn-primary" %>
+	 				<% else %>
+	 			 		<%= link_to "Add", new_user_session_path, class:"btn btn-primary"%>
+	 			 	<% end %>
+				 </div>
+ 		 </div>
+ 		 <div class="inline">
+	 			 <div class="list_website col-md-9">Website: <%=link_to school.Institution_Web_Address, url_options="http://#{school.Institution_Web_Address}"%></div>
+				 <div class="list_follow col-md-2">Followed by: <%= school.follow %></div>
+		 </div>
+	 </li>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+ <% end %>
+ 
+</ol>
+

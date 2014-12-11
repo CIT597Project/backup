@@ -1,0 +1,24 @@
+<% @school=School.find_by(Institution_Name:"University of Washington")%>
+<head>
+<Title align=center> University of Washington </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> University of Washington </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:240px">
+
+         <img src="https://news.cs.washington.edu/wp-content/uploads/2013/10/LMN_UW_032.jpg" height="400" width"800">
+</div>		
+</p>
+<p >
+<br>
+Computer Science & Engineering was established at the University of Washington as an inter-college graduate program in 1967. In 1975 an undergraduate program in Computer Science was added and departmental status was conferred. A second undergraduate program, in Computer Engineering, was added in 1989 when CSE moved to the College of Engineering, and a Professional Master's Program was added in 1996, and a combined Bachelors/Masters program in 2008. CSE currently has roughly fifty faculty, fifty staff members, 375 graduate students (200 in the full-time program and 175 in the Professional Masters Program), and 600 undergraduate students (200 Bachelors graduates per year).
+</p>
+<p>
+
+<%=render 'reviews'%>
+
+<a href="new">Back</a>
+</body>

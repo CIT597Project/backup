@@ -1,0 +1,43 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="col-md-4 detail_info">
+    <section class="user_info">
+      <%= gravatar_for @user %>
+      <h5><%= @user.username %></h5>
+      <span><%= link_to "Edit my profile", edit_user_registration_path %></span>
+			<br>
+			<%= link_to "My list ", mylist_path %><span class="badge"><%=current_user.my_schools.count.to_s%></span></li>
+    </section>
+    <section class="stats">
+      <%= render 'devise/shared/stats' %>
+			<br>
+			<br>
+			<hr>
+      <% if @users.any?%>
+        <div class="user_avatars">
+          <% @users.each do |user| %>
+				
+						<div data-toggle="tooltip" data-placement="top" title='<%=user.username %>'>
+            	<%= link_to gravatar_for(user,size: 30), list_path(:id=>user.id), method: "get" %>
+						</div>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+		<br>
+		<div id="add_following">
+		<%= button_to "Follow More", "/general/add_following", class: "btn btn-primary", :method => :get %>
+		<br>
+		<br>
+  </aside>
+  <div class="col-md-8 list">
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <ul class="users_follow">
+        <%= render 'general/users_list' %>
+      </ul>
+      <%= will_paginate %>
+    <% end %>
+  </div>
+</div>
+

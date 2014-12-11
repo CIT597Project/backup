@@ -1,0 +1,2 @@
+module MajorrankingsHelper
+end

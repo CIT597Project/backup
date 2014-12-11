@@ -1,0 +1,11 @@
+
+<%= form_for(@my_school) do |f| %>
+  <div class="search_school">
+		<%= f.label "New School"%>
+    <%= f.collection_select :school_id, School.order(:Institution_Name), :id, :Institution_Name, prompt: true %>
+	</div>
+	<div class="add_comment">
+		<%= f.text_area :comment, placeholder: "add comments..." %>
+  </div>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>

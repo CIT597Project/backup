@@ -1,0 +1,29 @@
+
+<% @school=School.find_by(Institution_Name:"Duke University")%>
+<head>
+<Title align=center> Duke University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Duke University </h1><h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+
+<div style=" margin-left:180px">
+
+         <img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Duke_University_08.jpg" height="400" width"800">
+</div>	
+</p>
+<p > 
+<br>
+Duke University is a private research university located in Durham, North Carolina, United States. Founded by Methodists and Quakers in the present-day town of Trinity in 1838, the school moved to Durham in 1892. In 1924, tobacco and electric power industrialist James B. Duke established The Duke Endowment, at which time the institution changed its name to honor his deceased father, Washington Duke.
+<p>
+The university's campus spans over 8,600 acres on three contiguous campuses in Durham as well as a marine lab in Beaufort. Duke's main campus—designed largely by African American architect Julian Abele—incorporates Gothic architecture with the 210-foot (64 m) Duke Chapel at the campus' center and highest point of elevation. The freshmen-populated East Campus contains Georgian-style architecture, while the main Gothic-style West Campus 1.5 miles away is adjacent to the Medical Center.
+<p>
+Duke's research expenditures in the 2012 fiscal year were $1.01 billion, the seventh largest in the nation. Competing in the Atlantic Coast Conference, Duke's athletic teams, known as the Blue Devils, have captured 15 team national championships, including four by its high profile men's basketball team. Duke was ranked among the world's best universities by both THE and QS, while tying for 8th in the 2015 U.S. News & World Report "Best National Universities Rankings." In 2014, Thomson Reuters named 32 Duke professors to its list of Highly Cited Researchers. The only schools with more primary affiliations were Harvard, Stanford, and UC Berkeley.</p>
+<p>
+
+
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>

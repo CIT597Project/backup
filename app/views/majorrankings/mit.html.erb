@@ -1,0 +1,28 @@
+<% @school=School.find_by(Institution_Name:"Massachusetts Institute of Technology")%>
+<head>
+<Title align=center> Massachusetts Institute of Technology </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Massachusetts Institute of Technology </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:175px">
+
+         <img src="http://upload.wikimedia.org/wikipedia/commons/1/17/Stata_Center1.jpg" height="400" width"800">
+</div>	
+</p>
+<p > 
+<br>
+The Electrical Engineering and Computer Science Department is the largest department at MIT, preparing over 300 graduate and undergraduate students each year to become leaders in diverse career fields such as academia, biomedical technology, finance, consulting, law, nanotechnology and more.  MIT EECS consistently ranks top by the the U.S. News and World Reports and is known globally for its world class faculty creating the best possible education, which is based on their innovative and award winning research.
+<p>
+EECS' nearly 130 faculty find their research homes in four major affiliate labs: the Computer Science and Artificial Intelligence Laboratory (CSAIL), the Laboratory for Information and Decision Systems (LIDS), the Microsystems and Technology Laboratories (MTL) and the Research Laboratory of Electronics (RLE).  The nature of interdisciplinary and collaborative thinking demonstrated by EECS faculty members cuts across these labs, reaching across MIT and into industry and academia worldwide.  
+<p>
+From robots that perform with professional dance troupes to medical electronic devices that harvest energy from differences in body temperature, EECS makes an impact in the quality of life world-wide.   What do you use every day?  Chances are that EECS has had a hand in it: the World Wide Web (Sir Tim Berners-Lee, CSAIL), the conversion of analog to digital TV (Jae S. Lim, RLE), building more reliable grids through development of systems behavior algorithms (work of Munther A. Dahleh, LIDS), new MRI scanning technologies (Elfar Adalsteinsson, RLE), and many more.</p>
+<p>
+
+<%=render 'reviews'%>
+<a href="new">Back</a>
+
+
+</body>

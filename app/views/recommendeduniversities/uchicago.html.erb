@@ -1,0 +1,28 @@
+<% @school=School.find_by(Institution_Name:"University of Chicago")%>
+<head>
+<Title align=center> The University of Chicago </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> The University of Chicago </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:140px">
+
+         <img src="https://visit.uchicago.edu/sites/visit.uchicago.edu/files/styles/slideshow-larger/public/uploads/images/athletic_fields.jpg?itok=7h7bEprd" height="400" width"800">
+</div>
+</p>
+<p>
+<br> 
+The University of Chicago (U of C, UChicago, or simply Chicago) is a private research university in Chicago, Illinois. Founded by the American Baptist Education Society with a donation from oil magnate and philanthropist John D. Rockefeller, the University of Chicago was incorporated in 1890; William Rainey Harper became the university's first president in 1891, and the first classes were held in 1892. Both Harper and future president Robert Maynard Hutchins advocated for Chicago's curriculum to be based upon theoretical and perennial issues rather than applied sciences and commercial utility.
+<p>
+The university consists of the College of the University of Chicago, various graduate programs and interdisciplinary committees organized into four divisions, six professional schools, and a school of continuing education. Chicago is particularly well known for its professional schools, which include the Pritzker School of Medicine, the Booth School of Business, the Law School, and the Divinity School. The university enrolls approximately 5,000 students in the College and about 15,000 students overall.</p>
+<p>
+
+
+
+<%=render '/majorrankings/reviews'%>
+<a href="new">Back</a>
+
+
+</body>

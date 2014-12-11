@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schoollist.name %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @schoollist.comment %>
+</p>
+
+<%= link_to 'Edit', edit_schoollist_path(@schoollist) %> |
+<%= link_to 'Back', schoollists_path %>

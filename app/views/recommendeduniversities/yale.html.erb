@@ -1,0 +1,28 @@
+<% @school=School.find_by(Institution_Name:"Yale University")%>
+<head>
+<Title align=center> Yale University </title>
+</head>
+
+<body bgcolor="#CEF6F5">
+<h1 align=center> Yale University </h1>
+<h4 class="followed_by">Followed by <%=pluralize(@school.follow, 'user')%></h4><hr>
+
+<div style=" margin-left:140px">
+
+         <img src="http://static.squarespace.com/static/529d80abe4b08dddf15d8d91/t/53137d05e4b08cb688174fe4/1393786123130/Yale+4.jpg?format=1500w" height="400" width"800" >
+</div>
+<p>
+<p>
+<br>
+Yale University is a private Ivy League research university in New Haven, Connecticut. Founded in 1701 as the "Collegiate School" by a group of Congregationalist ministers and chartered by the Colony of Connecticut, the university is the third-oldest institution of higher education in the United States. In 1718, the school was renamed "Yale College" in recognition of a gift from Elihu Yale, a governor of the British East India Company. Established to train Connecticut ministers in theology and sacred languages, by 1777 the school's curriculum began to incorporate humanities and sciences. During the 19th century Yale gradually incorporated graduate and professional instruction, awarding the first Ph.D. in the United States in 1861 and organizing as a university in 1887.
+<p>
+Yale is organized into twelve constituent schools: the original undergraduate college, the Graduate School of Arts & Sciences, and ten professional schools. While the university is governed by the Yale Corporation, each school's faculty oversees its curriculum and degree programs. In addition to a central campus in downtown New Haven, the University owns athletic facilities in Western New Haven, including the Yale Bowl, a campus in West Haven, Connecticut, and forest and nature preserves throughout New England. The University's assets include an endowment valued at $23.9 billion as of September 27, 2014.
+<p>
+Yale College undergraduates follow a liberal arts curriculum with departmental majors and are organized into a system of residential colleges. The Yale University Library, serving all twelve schools, holds more than 15 million volumes and is the third-largest academic library in the United States. Almost all faculty teach undergraduate courses, more than 2,000 of which are offered annually. Students compete intercollegiately as the Yale Bulldogs in the NCAA Division I Ivy League.
+Yale has graduated many notable alumni, including five U.S. Presidents, 19 U.S. Supreme Court Justices, 13 living billionaires, and many foreign heads of state. In addition, Yale has graduated thousands of members of Congress and many high-level U.S. diplomats, including former U.S. Secretary of State Hillary Clinton and current Secretary of State John Kerry. Fifty-two Nobel laureates have been affiliated with the University as students, faculty, or staff, and 230 Rhodes Scholars (the second most in the United States) graduated from the University.</p>
+
+
+<%=render '/majorrankings/reviews'%>
+
+<a href="new">Back</a>
+</body>
